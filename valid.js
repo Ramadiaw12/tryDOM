@@ -19,6 +19,8 @@ Form.addEventListener("submit", function (event) {
         event.preventDefault();
     }else if(!/[A-Z]/.test(userpassword)){
         errorMessage.textContent = 'Votre mot de passe doit contenir au moins une lettre majuscule'
+    }else if(!/[a-]/.test(userpassword)){
+        errorMessage.textContent = 'Votre mot de passe doit contenir au moins une lettre minuscule'
     }else if(!/[0-9]/.test(userpassword)){
         errorMessage.textContent = 'Votre mot de passe doit contenir au moins un chiffre'
         event.preventDefault();
